@@ -1,0 +1,6 @@
+Flask
+requests==2.11.1
+Pillow
+pytest-shutil
+Pyrebase
+gunicorn
