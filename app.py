@@ -2,7 +2,7 @@ from modules.AzureScan import *
 from modules.Barcode import *
 from modules.Img2Pdf import *
 from modules.Downloadata import *
-from flask import Flask,request,jsonify
+from flask import Flask,request,jsonify,render_template
 import time
 import os
 
@@ -28,8 +28,8 @@ def renderReciptData():
     return jsonify(result)
 
 @app.route('/')
-def landing():
-    return "Happy to serve you"
+def index():
+    return render_template('index.html')
 
 if __name__ == "__main__":
     app.run(debug=True,port=int(os.environ.get('PORT',5000)))
