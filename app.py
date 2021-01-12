@@ -2,6 +2,8 @@ from modules.AzureScan import *
 from modules.Barcode import *
 from modules.Img2Pdf import *
 from modules.Downloadata import *
+from modules.updateRatings import *
+from modules.knn import *
 from flask import Flask,request,jsonify,render_template
 import time
 import os
@@ -27,6 +29,11 @@ def renderReciptData():
         result[i] = data["analyzeResult"]["documentResults"][0]["fields"]["Items"]["valueArray"][i]["valueObject"]['Name']["text"]
     return jsonify(result)
 
+@app.route('/api/recommendations')
+def recomm():
+    updateRatingNow()
+    return jsonify(recommend())
+    
 @app.route('/')
 def index():
     return render_template('index.html')

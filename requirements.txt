@@ -1,6 +1,11 @@
 Flask
-requests==2.11.1
+requests
 Pillow
 pytest-shutil
 Pyrebase
 gunicorn
+numpy
+pandas
+scipy
+firebase_admin
+scikit-learn

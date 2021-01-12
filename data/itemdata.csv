@@ -1,0 +1,11 @@
+itemId,item,category
+1,apple,fruit
+2,banana,fruit
+3,milk,diary
+4,bread,dairy
+5,potato,vegitable
+6,chocolate,dairy
+7,gum,other
+8,coffee,dairy|other
+9,sugar,dairy|other
+10,cream,dairy
