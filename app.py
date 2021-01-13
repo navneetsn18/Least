@@ -2,7 +2,7 @@ from modules.AzureScan import *
 from modules.Barcode import *
 from modules.Img2Pdf import *
 from modules.Downloadata import *
-from modules.updateRatings import *
+from modules.updateData import *
 from modules.knn import *
 from flask import Flask,request,jsonify,render_template
 import time
@@ -31,7 +31,7 @@ def renderReciptData():
 
 @app.route('/api/recommendations')
 def recomm():
-    updateRatingNow()
+    updateDataNow()
     return jsonify(recommend())
     
 @app.route('/')
